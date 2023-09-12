@@ -6,3 +6,4 @@
 .next
 *.swp
 *.DS_STORE
+node_modules
