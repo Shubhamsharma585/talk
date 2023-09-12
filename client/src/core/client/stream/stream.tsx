@@ -36,6 +36,7 @@ export interface AttachOptions {
   storyID?: string;
   storyURL?: string;
   storyMode?: string;
+  avatar?: string;
   commentID?: string;
   cssAssets: string[];
   accessToken?: string;
@@ -110,6 +111,7 @@ export async function attach(options: AttachOptions) {
     eventEmitter: options.eventEmitter,
     refreshAccessTokenPromise,
     staticConfig: options.staticConfig,
+    avatar: options.avatar,
     customScrollContainer: options.customScrollContainer,
   });
 

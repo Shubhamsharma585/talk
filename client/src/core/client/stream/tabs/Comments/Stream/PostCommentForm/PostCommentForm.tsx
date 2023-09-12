@@ -88,6 +88,7 @@ interface Props {
   rteConfig: PropTypesOf<typeof CommentForm>["rteConfig"];
   showMessageBox?: boolean;
   siteID: string;
+  avatar?: string;
   story: PropTypesOf<typeof MessageBoxContainer>["story"];
   submitStatus: PropTypesOf<PostCommentSubmitStatusContainer>["status"];
 }
@@ -107,6 +108,7 @@ const PostCommentForm: FunctionComponent<Props> = ({
   siteID,
   story,
   submitStatus,
+  avatar,
 }) => {
   const translation = translations[mode];
 
@@ -128,6 +130,7 @@ const PostCommentForm: FunctionComponent<Props> = ({
         onSubmit={onSubmit}
         onChange={onChange}
         min={min}
+        avatar={avatar}
         topBorder={!showMessageBox && mode !== "rating"}
         initialValues={initialValues}
         max={max}
